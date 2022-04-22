@@ -5,5 +5,8 @@ public class Application {
 
         GameProgress.gameStart();
 
+        GameProgress.gamePlaying();
+
+
     }
 }

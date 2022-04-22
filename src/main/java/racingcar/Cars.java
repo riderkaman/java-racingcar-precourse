@@ -12,11 +12,11 @@ public class Cars {
     }
 
     public Cars(CarNames carNames) {
-        cars = new ArrayList<>();
+        this.cars = new ArrayList<>();
 
         for (String name : carNames.carNameSplit()) {
             CarName carName = new CarName(name);
-            cars.add(new Car(carName));
+            this.cars.add(new Car(carName));
         }
     }
 }

@@ -1,12 +1,17 @@
 package racingcar;
 
 import camp.nextstep.edu.missionutils.Console;
+import camp.nextstep.edu.missionutils.Randoms;
 
 public class GameProgress {
 
     static CarNames carNames;
     static Cars cars;
     static TryCount tryCount;
+
+    private static final int RANDOM_START = 0;
+    private static final int RANDOM_END = 9;
+    private static final int RANDOM_STANDARD = 4;
 
     public static void gameStart() {
         boolean isCarNamesNotCorrectInput = true;
@@ -61,4 +66,32 @@ public class GameProgress {
 
     }
 
+    public static void gamePlaying() {
+
+        System.out.println("실행 결과");
+
+        for (int i = 0; i < tryCount.tryCount; i++) {
+            carAction();
+            System.out.println("");
+        }
+
+    }
+
+    private static void carAction() {
+
+        for (Car c : cars.cars) {
+            c.goForward(isGoForward(c));
+            c.showNowPosition();
+        }
+    }
+
+    private static boolean isGoForward(Car c) {
+
+        int random = Randoms.pickNumberInRange(RANDOM_START, RANDOM_END);
+        if (random >= RANDOM_STANDARD) {
+            return true;
+        }
+
+        return false;
+    }
 }

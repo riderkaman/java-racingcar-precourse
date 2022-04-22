@@ -10,4 +10,11 @@ public class GoCount {
         goCount = START_COUNT;
     }
 
+    public void go() {
+        this.goCount += 1;
+    }
+
+    public int nowPosition() {
+        return goCount;
+    }
 }
