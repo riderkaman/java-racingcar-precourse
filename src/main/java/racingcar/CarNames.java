@@ -2,8 +2,9 @@ package racingcar;
 
 public class CarNames {
 
-    String carNames;
+    private final String CAR_NAME_DELEMETER = ",";
 
+    String carNames;
 
     public CarNames() {
 
@@ -38,5 +39,9 @@ public class CarNames {
             throw new IllegalArgumentException("[ERROR] 경주할 자동차는 최소 2대 이상이어야 합니다.");
         }
 
+    }
+
+    public String[] carNameSplit() {
+        return carNames.split(CAR_NAME_DELEMETER);
     }
 }
