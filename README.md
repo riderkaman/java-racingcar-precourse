@@ -14,9 +14,9 @@
 * 전진하는 조건은 0에서 9사이에서 random 값을 구한 후 random 값이 4이상일 경우 전진하고, 3 이하의 값이면 멈춘다.
 * 자동차 경주게임을 완료한 후 누가 우승했는지를 알려준다.
 * 우승자가 한 명 이상일 경우, 쉼표(,)로 이름을 구분해 출력한다.
-* 사용자가 잘못된 값을 입력할 경우 IllegalArgumentException를발생시키고, "[ERROR]"로 시작하는 에러메시지를
+* 사용자가 잘못된 값을 입력할 경우 IllegalArgumentException 를 발생시키고, "[ERROR]"로 시작하는 에러메시지를
 출력 후 그 부분부터 입력을 다시 받는다.
-  * Exception이 아닌 IllegalArgumentException, IllegalStateException등과 같은 명확한 유형을 처리한다.
+  * Exception 이 아닌 IllegalArgumentException, IllegalStateException 등과 같은 명확한 유형을 처리한다.
 
 ## 구현할 기능 목록
 * 데이터 입력받기
@@ -25,6 +25,6 @@
     * 잘못된 값인지 아닌지를 검사하는 로직 TDD 작성
 * 게임 진행하기
   * 시도 횟수만큼 게임 진행하기
-    * 시도 횟수를 for문 돌면서 random 호출 후, random 값에 따라 진행도 누적
+    * 시도 횟수를 for 문 돌면서 random 호출 후, random 값에 따라 진행도 누적
   * 시도 횟수가 끝난 경우, 우승자 결정하기
     * 가장 많이 나간 차량 찾는 로직 TDD 작성
