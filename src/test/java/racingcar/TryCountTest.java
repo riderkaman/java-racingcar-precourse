@@ -7,20 +7,22 @@ import org.junit.jupiter.params.provider.*;
 
 import static org.assertj.core.api.Assertions.*;
 
-@DisplayName("차량 이름 테스트")
-public class CarNameTest {
+@DisplayName("시도횟수 입력 테스트")
+public class TryCountTest {
 
-    CarName carName = new CarName();
+    TryCount tryCount = new TryCount();
 
     @ParameterizedTest
-    @ValueSource(strings = {"kaman123"})
-    @DisplayName("차량 이름 " + CarName.NAME_LENGTH_LIMIT + "글자 초과인지 테스트")
-    void carName_Length(String s) {
+    @ValueSource(strings = {"any", ""})
+    @DisplayName("숫자가 아닌 경우 테스트")
+    void tryCount_Not_Integer(String s) {
         assertThatThrownBy(() -> {
-            carName.isCarNameUpperLength(s);
+            tryCount.isInputIsInteger(s);
         }).isInstanceOf(IllegalArgumentException.class)
                 .hasMessageContaining("[ERROR]");
+
     }
+
 
 
 }

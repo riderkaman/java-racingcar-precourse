@@ -2,7 +2,7 @@ package racingcar;
 
 public class CarName {
 
-    private final int NAME_LENGTH_LIMIT = 5;
+    public static final int NAME_LENGTH_LIMIT = 5;
 
     String carName;
 
