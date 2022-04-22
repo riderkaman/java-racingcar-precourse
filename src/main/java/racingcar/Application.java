@@ -7,6 +7,7 @@ public class Application {
 
         GameProgress.gamePlaying();
 
+        GameProgress.showGameResult();
 
     }
 }

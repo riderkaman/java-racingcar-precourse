@@ -34,4 +34,11 @@ public class Car {
         }
         System.out.println(stringBuilder.toString());
     }
+
+    public String findWinner(int max) {
+        if (goCount.nowPosition() == max) {
+            return this.carName.carName + ", ";
+        }
+        return "";
+    }
 }

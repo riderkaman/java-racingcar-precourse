@@ -94,4 +94,11 @@ public class GameProgress {
 
         return false;
     }
+
+    public static void showGameResult() {
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("최종 우승자: ");
+        stringBuilder.append(cars.whoIsWinner());
+        System.out.println(stringBuilder.toString());
+    }
 }
